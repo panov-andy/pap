@@ -41,6 +41,8 @@
 //!
 //! {"jsonrpc": "2.0", "method": "exit", "params": null}
 //! ```
+mod parser;
+
 use std::error::Error;
 
 use lsp_server::{Connection, ExtractError, Message, Request, RequestId, Response};
