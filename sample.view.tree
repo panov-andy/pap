@@ -1,0 +1,16 @@
+$hyoo_idea_project_card $mol_link
+	arg * project <= id
+	project $hyoo_idea_project
+		id => id
+		logo_node => logo_node
+		brief => brief
+	default_name @ \Untitled Project
+	sub /
+		<= Logo $hyoo_idea_project_logo blob <= logo_node
+		<= List $mol_list rows /
+			<= Name $mol_dimmer
+				haystack <= project_name \
+				needle <= highlight \
+			<= Brief $mol_dimmer
+				haystack <= brief
+				needle <= highlight \
